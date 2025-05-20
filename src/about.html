@@ -1,0 +1,94 @@
+---
+title: About
+layout: layout.html 
+---
+
+<section class="hero-section">
+   <div class="about-section-grid"><!-- Grid -->
+      
+      <div class="item-1">
+         <div class="about-image">
+            <img src="/img/profile-headshot.webp" alt="Image of Miguel Fondeur">
+         </div>
+      </div>
+
+      <div class="item-2 long-copy">
+         <h1>I’m Miguel Fondeur. I've been building digital products for over ten years.</h1>
+         <p>
+             I specialize in reusable web components and design language systems, with experience building responsive 
+             web apps across multiple devices. I focus on writing scalable, maintainable, and performant front-end code, 
+             preferring clean, well-documented native JavaScript that works across all browsers.
+         </p>
+         <p>
+             My background is in music. After earning a degree in Music Business, I spent years playing drums for various 
+             artists while working at a music store. In 2013, I set out to help musicians market themselves by developing 
+             an <abbr title="Minimum Viable Product">MVP</abbr> for my app, "nuroute." Over six months, I self-taught 
+             <strong>HTML, CSS, JavaScript, PHP, and MySQL.</strong>  
+         </p>
+         <p>
+             I moved to New York to network and refine my idea but realized I needed more startup experience. That led me to 
+             <strong>Startup Institute</strong>, an immersive program during New York’s "Silicon Alley" boom. The experience 
+             launched me into my career in tech.
+         </p>
+         <p>
+             Although my original idea never launched, it jumpstarted my career. Since then, I’ve worked with companies of 
+             all sizes across various sectors. It’s been a wild ride, and I’m grateful for every step.
+         </p> 
+      </div>
+
+      <div class="item-3">
+         <ul class="social-list" role="list">
+            {% for entry in socials %}
+               <li class="flex">
+                  <a class="" href="{{ entry.link }}">
+                     {{ entry.icon }}
+                     <span class="ml-4">Follow on {{ entry.name }}</span>
+                  </a>
+               </li>
+            {% endfor %}
+            
+            <li class="">
+               <a class="" href="mailto:spencer@planetaria.tech">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" width="24" class="">
+                     <path fill-rule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path>
+                  </svg>
+                  <span class="">miguelfondeur@gmail.com</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      
+   </div>
+</section>
+
+<section class="content-section">
+   <h2>Clients & Collaborations</h2>
+   <div class="brand-grid">
+      {% for brand in brands %}
+         <a href="{{ brand.link }}" class="grid-item" title="Go to {{ brand.name }}" target="_blank">
+            <div class="brand">
+               {{ brand.svg | raw }}
+            </div>
+         </a>
+      {% endfor %}
+   </div>
+</section>
+
+<section class="content-section">
+   <div class="container" data-width="small">
+      <h2>About this site</h2>
+      <p>
+         This site was a labor of love. It took a long time to update my personal site because, well, life gets in the way.  
+         I wanted a space to share my thoughts, so I added a blog. For the design, I kept it minimal and took inspiration from  
+         <a href="https://spotlight.tailwindui.com/" title="Go to Tailwind Template">this template</a>.  
+       </p>
+       <p>
+         The logo is my father's signature "F." He passed in 2023, and this is a small way of keeping his memory alive.  
+       </p>
+       <p>
+         The site was built with the <a href="https://www.11ty.dev/" target="_blank" title="Go To 11ty's website">11ty</a>  
+         static site generator and deployed to <a href="https://www.netlify.com/" target="_blank" title="Go to Netlify's website">Netlify</a>.  
+         No other build tools, no libraries, no frameworks—just HTML, CSS, and a little JavaScript to enhance the UX.  
+       </p>
+   </div>
+</section>

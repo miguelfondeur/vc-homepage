@@ -1,0 +1,26 @@
+.skip-nav-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-gray-8);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    padding: var(--ui-spacing-3);
+    z-index: 10;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+
+    &:not(:focus) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    @media (min-width:  640px) {
+        left: var(--ui-spacing-8);
+    }
+}

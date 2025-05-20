@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>CHAOS BYTE | About</title>
+   <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
+   <meta name="author" content="Miguel Fondeur">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph (for social media sharing) -->
+   <meta property="og:title" content="CHAOS BYTE">
+   <meta property="og:description" content="">
+   <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta property="og:url" content="https://miguelfondeur.com">
+   <meta property="og:type" content="website">
+   <meta property="og:logo" content="https://miguelfondeur.com/img/og-image-2.jpg" />
+
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="CHAOS BYTE">
+   <meta name="twitter:description" content="">
+   <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
+
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+   <!-- Canonical URL (to prevent duplicate content issues) -->
+   <link rel="canonical" href="https://miguelfondeur.com">
+
+   <!-- CSS -->
+   <link href="/css/main.min.css" rel="stylesheet">
+
+   <!-- JS -->
+   <script>
+      // immediately store theme
+      (function() {
+         const storedTheme = localStorage.getItem("theme");
+         if (storedTheme) {
+            document.documentElement.dataset.theme = storedTheme;
+         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.dataset.theme = "dark";
+         } else {
+            document.documentElement.dataset.theme = "light";
+         }
+      })();
+   </script>
+   <!-- Does not work in all browser -->
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "/articles/index.html",
+               "/apps/index.html",
+               "/thank-you/index.html",
+               "/index.html"
+            ]
+         }]
+      }
+   </script>
+   <script src="/js/index.js" type="module" defer></script>
+   <script src="/js/popover.min.js" type="module" defer></script>
+</head>
+<body data-theme="">
+   <div class="site-wrapper">
+
+      <header id="site-header" class="site-header">
+    <nav class="container">
+
+      <a href="#site-content" class="skip-nav-button">Skip Navigation</a>
+      <a href="/" class="site-logo glitch">CHAOS <span class="byte-accent">BYTE</span></a>
+
+      <ul class="site-nav">
+        <li><a href="/vibes">Vibes</a></li>
+        <li><a href="/merch">Merch</a></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/shows">Shows</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+   </nav>
+ </header>
+   
+      <main id="site-content">
+         
+         
+<section class="hero-section">
+   <div class="about-section-grid"><!-- Grid -->
+      
+      <div class="item-1">
+         <div class="about-image">
+            <img src="/img/profile-headshot.webp" alt="Image of Miguel Fondeur">
+         </div>
+      </div>
+
+      <div class="item-2 long-copy">
+         <h1>I’m Miguel Fondeur. I've been building digital products for over ten years.</h1>
+         <p>
+             I specialize in reusable web components and design language systems, with experience building responsive 
+             web apps across multiple devices. I focus on writing scalable, maintainable, and performant front-end code, 
+             preferring clean, well-documented native JavaScript that works across all browsers.
+         </p>
+         <p>
+             My background is in music. After earning a degree in Music Business, I spent years playing drums for various 
+             artists while working at a music store. In 2013, I set out to help musicians market themselves by developing 
+             an <abbr title="Minimum Viable Product">MVP</abbr> for my app, "nuroute." Over six months, I self-taught 
+             <strong>HTML, CSS, JavaScript, PHP, and MySQL.</strong>  
+         </p>
+         <p>
+             I moved to New York to network and refine my idea but realized I needed more startup experience. That led me to 
+             <strong>Startup Institute</strong>, an immersive program during New York’s "Silicon Alley" boom. The experience 
+             launched me into my career in tech.
+         </p>
+         <p>
+             Although my original idea never launched, it jumpstarted my career. Since then, I’ve worked with companies of 
+             all sizes across various sectors. It’s been a wild ride, and I’m grateful for every step.
+         </p> 
+      </div>
+
+      <div class="item-3">
+         <ul class="social-list" role="list">
+            
+            
+            <li class="">
+               <a class="" href="mailto:spencer@planetaria.tech">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" width="24" class="">
+                     <path fill-rule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path>
+                  </svg>
+                  <span class="">miguelfondeur@gmail.com</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      
+   </div>
+</section>
+
+<section class="content-section">
+   <h2>Clients & Collaborations</h2>
+   <div class="brand-grid">
+      
+   </div>
+</section>
+
+<section class="content-section">
+   <div class="container" data-width="small">
+      <h2>About this site</h2>
+      <p>
+         This site was a labor of love. It took a long time to update my personal site because, well, life gets in the way.  
+         I wanted a space to share my thoughts, so I added a blog. For the design, I kept it minimal and took inspiration from  
+         <a href="https://spotlight.tailwindui.com/" title="Go to Tailwind Template">this template</a>.  
+       </p>
+       <p>
+         The logo is my father's signature "F." He passed in 2023, and this is a small way of keeping his memory alive.  
+       </p>
+       <p>
+         The site was built with the <a href="https://www.11ty.dev/" target="_blank" title="Go To 11ty's website">11ty</a>  
+         static site generator and deployed to <a href="https://www.netlify.com/" target="_blank" title="Go to Netlify's website">Netlify</a>.  
+         No other build tools, no libraries, no frameworks—just HTML, CSS, and a little JavaScript to enhance the UX.  
+       </p>
+   </div>
+</section>
+         
+      </main>
+   
+      <footer id="site-footer" class="site-footer">
+    <div class="container footer-flex">
+       <div class="footer-brand">
+          <a href="/" class="footer-logo">CHAOS <span class="byte-accent">BYTE</span></a>
+       </div>
+       <menu class="footer-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/vibes">Vibes</a></li>
+          <li><a href="/merch">Merch</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="/shows">Shows</a></li>
+          <li><a href="/contact">Contact</a></li>
+       </menu>
+       <div class="footer-social">
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="footer-social-link">
+             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 5.924c-.793.352-1.645.59-2.54.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.01-4.49 4.49 0 .352.04.695.116 1.022C7.728 9.37 4.1 7.6 1.67 4.905a4.48 4.48 0 0 0-.61 2.26c0 1.56.795 2.94 2.01 3.75a4.48 4.48 0 0 1-2.034-.563v.057c0 2.18 1.55 4 3.6 4.42-.377.103-.775.158-1.185.158-.29 0-.57-.028-.845-.08.57 1.78 2.23 3.08 4.2 3.12A8.98 8.98 0 0 1 2 19.54a12.7 12.7 0 0 0 6.88 2.02c8.26 0 12.78-6.84 12.78-12.78 0-.195-.004-.39-.013-.583A9.14 9.14 0 0 0 24 4.59a8.98 8.98 0 0 1-2.54.698z" fill="#fff"/></svg>
+          </a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
+             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.37 3.5 12 3.5 12 3.5s-7.37 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.2 0 12 0 12s0 3.8.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.63 20.5 12 20.5 12 20.5s7.37 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.8 24 12 24 12s0-3.8-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff"/></svg>
+          </a>
+       </div>
+    </div>
+    <div class="footer-copyright">
+      <small>© 2025 Chaos Byte. All rights reserved.</small>
+    </div>
+</footer>
+
+   </div>
+   <!-- inline scripts -->
+   <script>
+      document.body.classList.add("js-enabled");
+   </script>
+</body>
+</html>

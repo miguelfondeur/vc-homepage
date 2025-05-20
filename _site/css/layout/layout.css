@@ -1,0 +1,24 @@
+.site-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    /* max-width: 128rem; */
+    margin-inline: auto;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    position: relative;
+}
+
+main#site-content {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 67.2rem;
+    margin-inline: auto;
+
+    @media (min-width: 1024px) {
+        max-width: 128rem;
+    }
+}
+

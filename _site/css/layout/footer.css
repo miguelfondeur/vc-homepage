@@ -1,0 +1,76 @@
+/* Footer Styles */
+.site-footer {
+  background: #0a0e1a;
+  color: #fff;
+  padding: 6rem 0 3.2rem 0;
+  border-top: 4px solid var(--color-primary, #ff2fa0);
+  font-size: 1.6rem;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+.footer-brand {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.footer-logo {
+  font-family: var(--font-family-heading, 'Jersey 25', sans-serif);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-decoration: none;
+}
+.footer-logo .byte-accent {
+  color: var(--color-primary, #ff2fa0);
+  text-shadow: 0 0 8px var(--color-primary, #ff2fa0), 0 0 2px #fff;
+}
+.footer-menu {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: color 0.2s;
+}
+.footer-menu a:hover {
+  color: var(--color-primary, #ff2fa0);
+}
+.footer-social {
+  display: flex;
+  gap: 1.6rem;
+}
+.footer-social-link svg {
+  display: block;
+  transition: transform 0.2s;
+}
+.footer-social-link:hover svg {
+  transform: scale(1.15) rotate(-8deg);
+  filter: drop-shadow(0 0 6px var(--color-primary, #ff2fa0));
+}
+.footer-copyright {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin-top: 3.2rem;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+  .footer-brand {
+    font-size: 1.8rem;
+  }
+}
