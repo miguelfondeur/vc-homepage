@@ -1,0 +1,36 @@
+{
+  "apps": [
+    {
+      "title": "VCBot",
+      "url": "https://www.vcbot.ai/",
+      "image": "/assets/img/vibe-apps/vcbot.png",
+      "description": "Someone once said \"VCs would be the last job AI could replace\".Turns out even roasting founders doesn't require human effort.",
+      "type": "satire",
+      "isNew": true
+    },
+    {
+      "title": "V-Combinator",
+      "url": "https://www.v-combinator.com/",
+      "image": "/assets/img/vibe-apps/vc-logo.png",
+      "description": "A launchpad for indie creators using generative AI to build fun, expressive products. Each week, creators submit their apps, prototypes, or experiments — and the community votes. We announce batch winners every week. Whether it’s polished or chaotic, just ship it.",
+      "type": "alternative tech",
+      "isNew": false
+    },
+    {
+      "title": "LayoffBot",
+      "url": "https://layoffbot.ai",
+      "image": "/assets/img/vibe-apps/layoffbot.jpeg",
+      "description": "Generate corporate-style layoff messages with the perfect mix of corporate jargon and empty promises. For when you need to let someone down gently.",
+      "type": "satire",
+      "isNew": false
+    },
+    {
+      "title": "BreakupBot",
+      "url": "https://breakup-bot-ai.vercel.app",
+      "image": "/assets/img/vibe-apps/breakupbot.jpeg",
+      "description": "The AI-powered breakup assistant that helps you craft the perfect breakup message. Because sometimes you need a little help being heartless.",
+      "type": "satire",
+      "isNew": false
+    }
+  ]
+} 

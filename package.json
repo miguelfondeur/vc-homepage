@@ -16,9 +16,6 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "css:watch": "esbuild src/css/main.css --bundle --minify --outfile=public/css/main.min.css --watch",
-    "eleventy:serve": "eleventy --serve",
-    "dev": "npm-run-all --parallel css:watch eleventy:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

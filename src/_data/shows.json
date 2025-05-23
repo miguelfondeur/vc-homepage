@@ -1,0 +1,24 @@
+{
+  "shows": [
+    {
+      "title": "Ship it Or Quit it",
+      "description": "Love it OR List it for Vibe Coded Apps. We review Vibe coded apps to see if there's a good idea or a bad idea there.",
+      "episodes": [
+        {
+          "title": "Episode 1: The Initial Review",
+          "description": "We review 17 Vibe coded apps from V-Combinator and Loveable, including the hilarious 'Dinder' - a dating app for tiny people, and the impressive 'Melofy' lo-fi music player. After careful consideration, we select our top three favorites.",
+          "thumbnail": "/assets/img/shows/ship-1.png",
+          "url": "https://youtube.com/watch?v=episode1",
+          "duration": "45:30"
+        },
+        {
+          "title": "Episode 2: The Deep Dive",
+          "description": "Join our panel of three creatives - one video producer and two seasoned developers - as we deep dive into our final three apps. We discuss which one is best and how the others can improve.",
+          "thumbnail": "/assets/img/shows/ship-2.png",
+          "url": "https://youtube.com/watch?v=episode2",
+          "duration": "52:15"
+        }
+      ]
+    }
+  ]
+} 

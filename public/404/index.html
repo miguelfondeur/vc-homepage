@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>CHAOS BYTE | 404 - Page Not Found</title>
+   <meta name="description" content="Miguel Fondeur is a software engineer with over 10 years of experience creating digital products for the web. He also writes about the things he learns along the way." />
+   <meta name="author" content="Miguel Fondeur">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph (for social media sharing) -->
+   <meta property="og:title" content="CHAOS BYTE">
+   <meta property="og:description" content="">
+   <meta property="og:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <meta property="og:url" content="https://miguelfondeur.com">
+   <meta property="og:type" content="website">
+   <meta property="og:logo" content="https://miguelfondeur.com/img/og-image-2.jpg" />
+
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="CHAOS BYTE">
+   <meta name="twitter:description" content="">
+   <meta name="twitter:image" content="https://miguelfondeur.com/img/og-image-2.jpg">
+   <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
+
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+   <!-- Canonical URL (to prevent duplicate content issues) -->
+   <link rel="canonical" href="https://miguelfondeur.com">
+
+   <!-- CSS -->
+   <link href="/css/main.min.css" rel="stylesheet">
+
+   <!-- JS -->
+   <script>
+      // immediately store theme
+      (function() {
+         const storedTheme = localStorage.getItem("theme");
+         if (storedTheme) {
+            document.documentElement.dataset.theme = storedTheme;
+         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.dataset.theme = "dark";
+         } else {
+            document.documentElement.dataset.theme = "light";
+         }
+      })();
+   </script>
+   <!-- Does not work in all browser -->
+   <script type="speculationrules">
+      {
+        "prerender": [{
+            "source": "list",
+            "urls": [
+               "/work/index.html", 
+               "/about/index.html",
+               "/articles/index.html",
+               "/apps/index.html",
+               "/thank-you/index.html",
+               "/index.html"
+            ]
+         }]
+      }
+   </script>
+   <script src="/js/index.js" type="module" defer></script>
+   <script src="/js/popover.min.js" type="module" defer></script>
+   <style>
+      /* Glitch effect styles */
+      .site-glitch {
+        animation: glitch 0.3s infinite;
+        position: relative;
+      }
+
+      .site-glitch::before,
+      .site-glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-black);
+      }
+
+      .site-glitch::before {
+        left: 2px;
+        text-shadow: -2px 0 var(--color-primary);
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+      }
+
+      .site-glitch::after {
+        left: -2px;
+        text-shadow: -2px 0 var(--color-tertiary);
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+      }
+
+      @keyframes glitch {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(2px, 2px);
+        }
+        80% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      @keyframes glitch-anim {
+        0% {
+          clip: rect(31px, 9999px, 94px, 0);
+        }
+        5% {
+          clip: rect(70px, 9999px, 71px, 0);
+        }
+        10% {
+          clip: rect(29px, 9999px, 83px, 0);
+        }
+        15% {
+          clip: rect(16px, 9999px, 91px, 0);
+        }
+        20% {
+          clip: rect(40px, 9999px, 73px, 0);
+        }
+        25% {
+          clip: rect(2px, 9999px, 14px, 0);
+        }
+        30% {
+          clip: rect(14px, 9999px, 82px, 0);
+        }
+        35% {
+          clip: rect(60px, 9999px, 87px, 0);
+        }
+        40% {
+          clip: rect(10px, 9999px, 85px, 0);
+        }
+        45% {
+          clip: rect(31px, 9999px, 27px, 0);
+        }
+        50% {
+          clip: rect(44px, 9999px, 27px, 0);
+        }
+        55% {
+          clip: rect(38px, 9999px, 73px, 0);
+        }
+        60% {
+          clip: rect(73px, 9999px, 50px, 0);
+        }
+        65% {
+          clip: rect(23px, 9999px, 85px, 0);
+        }
+        70% {
+          clip: rect(19px, 9999px, 25px, 0);
+        }
+        75% {
+          clip: rect(40px, 9999px, 62px, 0);
+        }
+        80% {
+          clip: rect(95px, 9999px, 30px, 0);
+        }
+        85% {
+          clip: rect(63px, 9999px, 68px, 0);
+        }
+        90% {
+          clip: rect(37px, 9999px, 23px, 0);
+        }
+        95% {
+          clip: rect(38px, 9999px, 34px, 0);
+        }
+        100% {
+          clip: rect(82px, 9999px, 11px, 0);
+        }
+      }
+
+      @keyframes glitch-anim2 {
+        0% {
+          clip: rect(65px, 9999px, 100px, 0);
+        }
+        5% {
+          clip: rect(52px, 9999px, 74px, 0);
+        }
+        10% {
+          clip: rect(79px, 9999px, 85px, 0);
+        }
+        15% {
+          clip: rect(75px, 9999px, 5px, 0);
+        }
+        20% {
+          clip: rect(67px, 9999px, 61px, 0);
+        }
+        25% {
+          clip: rect(14px, 9999px, 79px, 0);
+        }
+        30% {
+          clip: rect(1px, 9999px, 66px, 0);
+        }
+        35% {
+          clip: rect(86px, 9999px, 30px, 0);
+        }
+        40% {
+          clip: rect(23px, 9999px, 98px, 0);
+        }
+        45% {
+          clip: rect(85px, 9999px, 72px, 0);
+        }
+        50% {
+          clip: rect(71px, 9999px, 75px, 0);
+        }
+        55% {
+          clip: rect(2px, 9999px, 48px, 0);
+        }
+        60% {
+          clip: rect(30px, 9999px, 16px, 0);
+        }
+        65% {
+          clip: rect(59px, 9999px, 50px, 0);
+        }
+        70% {
+          clip: rect(41px, 9999px, 62px, 0);
+        }
+        75% {
+          clip: rect(2px, 9999px, 82px, 0);
+        }
+        80% {
+          clip: rect(47px, 9999px, 73px, 0);
+        }
+        85% {
+          clip: rect(3px, 9999px, 27px, 0);
+        }
+        90% {
+          clip: rect(26px, 9999px, 55px, 0);
+        }
+        95% {
+          clip: rect(42px, 9999px, 97px, 0);
+        }
+        100% {
+          clip: rect(38px, 9999px, 49px, 0);
+        }
+      }
+
+      /* Logo animation */
+      .site-logo {
+        animation: logo-glitch 2s infinite linear alternate-reverse;
+      }
+
+      @keyframes logo-glitch {
+        0% {
+          text-shadow: 
+            2px 2px 0 var(--color-primary),
+            -2px -2px 0 var(--color-tertiary),
+            4px 4px 0 var(--color-secondary);
+        }
+        25% {
+          text-shadow: 
+            -2px 2px 0 var(--color-primary),
+            2px -2px 0 var(--color-tertiary),
+            -4px 4px 0 var(--color-secondary);
+        }
+        50% {
+          text-shadow: 
+            2px -2px 0 var(--color-primary),
+            -2px 2px 0 var(--color-tertiary),
+            4px -4px 0 var(--color-secondary);
+        }
+        75% {
+          text-shadow: 
+            -2px -2px 0 var(--color-primary),
+            2px 2px 0 var(--color-tertiary),
+            -4px -4px 0 var(--color-secondary);
+        }
+        100% {
+          text-shadow: 
+            2px 2px 0 var(--color-primary),
+            -2px -2px 0 var(--color-tertiary),
+            4px 4px 0 var(--color-secondary);
+        }
+      }
+   </style>
+</head>
+<body data-theme="">
+   <div class="site-wrapper">
+
+      <header id="site-header" class="site-header">
+    <nav class="container">
+
+      <a href="#site-content" class="skip-nav-button">Skip Navigation</a>
+      <a href="/" class="site-logo glitch">CHAOS <span class="byte-accent">BYTE</span></a>
+
+      <ul class="site-nav">
+        <li><a href="/" >Home</a></li>
+        <li><a href="/vibes" >Vibes</a></li>
+        <li><a href="/articles" >Articles</a></li>
+        <!-- <li><a href="/shows" >Shows</a></li> -->
+        <li><a href="/merch" >Merch</a></li>
+        <li><a href="/contact" >Contact</a></li>
+      </ul>
+   </nav>
+ </header>
+   
+      <main id="site-content">
+         
+         
+<section class="error-hero">
+  <div class="container">
+    <div class="error-content">
+      <h1 class="error-title glitch">404</h1>
+      <h2 class="error-subtitle">SYSTEM ERROR</h2>
+      <p class="error-message">Looks like you've hit a glitch in the matrix. The page you're looking for doesn't exist or has been corrupted.</p>
+      <div class="error-actions">
+        <a href="/" class="button button-primary">Return to Base</a>
+        <a href="javascript:history.back()" class="button button-secondary">Go Back</a>
+      </div>
+      <div class="error-matrix">
+        <pre class="matrix-code">
+01001000 01000101 01001100 01010000
+01001000 01000101 01001100 01010000
+01001000 01000101 01001100 01010000
+01001000 01000101 01001100 01010000
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
+         
+      </main>
+   
+      <footer id="site-footer" class="site-footer">
+        <div class="container footer-flex">
+   <div class="footer-brand">
+      <a href="/" class="footer-logo">CHAOS <span class="byte-accent">BYTE</span></a>
+   </div>
+   <menu class="footer-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/vibes">Vibes</a></li>
+      <li><a href="/articles/">Articles</a></li>
+      <!-- <li><a href="/shows">Shows</a></li> -->
+      <li><a href="/merch">Merch</a></li>
+      <li><a href="/contact">Contact</a></li>
+   </menu>
+   <div class="footer-social">
+      <a href="https://twitter.com/miguelfondeur" target="_blank" rel="noopener" aria-label="Twitter" class="footer-social-link">
+         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#fff"/>
+         </svg>
+      </a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
+         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.37 3.5 12 3.5 12 3.5s-7.37 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.2 0 12 0 12s0 3.8.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.63 20.5 12 20.5 12 20.5s7.37 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.8 24 12 24 12s0-3.8-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff"/></svg>
+      </a>
+   </div>
+</div>
+<div class="footer-copyright">
+  <small>© 2025 Chaos Byte. All rights reserved.</small>
+</div>
+      </footer>
+
+      <dialog id="terminalModal" class="terminal-modal">
+        <div class="terminal-header">
+          <span class="terminal-title">Newsletter Subscription Terminal</span>
+        </div>
+        <div class="terminal-content">
+          <div id="terminalOutput"></div>
+          <form class="terminal-form" id="terminalForm">
+            <div class="terminal-input">
+              <span class="terminal-prompt">$</span>
+              <input type="text" class="terminal-field" id="terminalInput" placeholder="Type here..." autocomplete="off" required>
+              <span class="terminal-cursor"></span>
+            </div>
+          </form>
+        </div>
+      </dialog>
+
+   </div>
+   <!-- inline scripts -->
+   <script>
+      document.body.classList.add("js-enabled");
+   </script>
+   <script>
+      const ASCII_ART = `
+        /\\___/\\
+       (  o o  )
+       (  =^=  ) 
+        (____)__)
+      `;
+
+      const terminalModal = document.getElementById('terminalModal');
+      const terminalForm = document.getElementById('terminalForm');
+      const terminalInput = document.getElementById('terminalInput');
+      const terminalOutput = document.getElementById('terminalOutput');
+      let currentStep = 'name';
+
+      function addMessage(message, type = '') {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `terminal-message ${type}`;
+        messageDiv.textContent = message;
+        terminalOutput.appendChild(messageDiv);
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+      }
+
+      function triggerGlitchEffect() {
+        const siteWrapper = document.querySelector('.site-wrapper');
+        siteWrapper.classList.add('site-glitch');
+        siteWrapper.setAttribute('data-text', siteWrapper.textContent);
+        
+        // Remove the effect after 3 seconds
+        setTimeout(() => {
+          siteWrapper.classList.remove('site-glitch');
+          siteWrapper.removeAttribute('data-text');
+        }, 3000);
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const input = terminalInput.value.trim();
+        
+        if (currentStep === 'name') {
+          if (input) {
+            addMessage(`Name: ${input}`);
+            addMessage('Enter your email:');
+            currentStep = 'email';
+            terminalInput.value = '';
+            terminalInput.focus();
+          }
+        } else if (currentStep === 'email') {
+          if (input.includes('@')) {
+            addMessage(`Email: ${input}`);
+            addMessage('Subscribing...');
+            setTimeout(() => {
+              addMessage('Successfully subscribed!', 'terminal-success');
+              addMessage(ASCII_ART, 'terminal-ascii');
+              addMessage('Type "yes" or press ESC to close');
+              currentStep = 'close';
+              terminalInput.value = '';
+              terminalInput.focus();
+            }, 1000);
+          } else {
+            addMessage('Please enter a valid email address', 'terminal-error');
+            terminalInput.value = '';
+            terminalInput.focus();
+          }
+        } else if (currentStep === 'close') {
+          if (input.toLowerCase() === 'yes') {
+            terminalModal.close();
+            resetTerminal();
+          } else if (input.toLowerCase() === 'chaos byte') {
+            addMessage('CHAOS BYTE DETECTED! INITIATING SYSTEM GLITCH...', 'terminal-success');
+            setTimeout(() => {
+              terminalModal.close();
+              resetTerminal();
+              triggerGlitchEffect();
+            }, 1000);
+          } else {
+            addMessage('Please type "yes" to close or press ESC');
+            terminalInput.value = '';
+            terminalInput.focus();
+          }
+        }
+      }
+
+      function resetTerminal() {
+        terminalOutput.innerHTML = '';
+        terminalInput.value = '';
+        currentStep = 'name';
+        addMessage('Enter your name:');
+      }
+
+      terminalForm.addEventListener('submit', handleSubmit);
+
+      document.querySelectorAll('[data-modal="terminalModal"]').forEach(button => {
+        button.addEventListener('click', () => {
+          terminalModal.showModal();
+          resetTerminal();
+          terminalInput.focus();
+        });
+      });
+
+      // Handle ESC key for closing the modal
+      terminalModal.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          terminalModal.close();
+          resetTerminal();
+        }
+      });
+
+      // Close modal when clicking the backdrop
+      terminalModal.addEventListener('click', (event) => {
+        if (event.target === terminalModal) {
+          terminalModal.close();
+          resetTerminal();
+        }
+      });
+    </script>
+</body>
+</html>

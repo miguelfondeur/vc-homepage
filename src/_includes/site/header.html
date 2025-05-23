@@ -5,11 +5,12 @@
       <a href="/" class="site-logo glitch">CHAOS <span class="byte-accent">BYTE</span></a>
 
       <ul class="site-nav">
-        <li><a href="/vibes">Vibes</a></li>
-        <li><a href="/merch">Merch</a></li>
-        <li><a href="/articles">Articles</a></li>
-        <li><a href="/shows">Shows</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>Home</a></li>
+        <li><a href="/vibes" {% if page.url == '/vibes/' %} aria-current="page" {% endif %}>Vibes</a></li>
+        <li><a href="/articles" {% if page.url == '/articles/' %} aria-current="page" {% endif %}>Articles</a></li>
+        <!-- <li><a href="/shows" {% if page.url == '/shows/' %} aria-current="page" {% endif %}>Shows</a></li> -->
+        <li><a href="/merch" {% if page.url == '/merch/' %} aria-current="page" {% endif %}>Merch</a></li>
+        <li><a href="/contact" {% if page.url == '/contact/' %} aria-current="page" {% endif %}>Contact</a></li>
       </ul>
    </nav>
  </header>

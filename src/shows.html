@@ -1,0 +1,39 @@
+---
+layout: layout.html
+title: Shows - Chaos Byte
+description: Watch our latest shows and tutorials about breaking the rules of web development.
+---
+
+<section class="page-hero shows-hero">
+  <div class="container">
+    <h1 class="page-title glitch">Latest Shows</h1>
+    <p class="page-subtitle">Watch us break every web design rule in the book. No corporate BS, just pure digital chaos.</p>
+  </div>
+</section>
+
+<section class="content-section shows-page">
+  <div class="container">
+    {% for show in shows.shows %}
+    <article class="show-card">
+      <div class="show-info">
+        <h2>{{ show.title }}</h2>
+        <p>{{ show.description }}</p>
+      </div>
+      <div class="episodes-list">
+        {% for episode in show.episodes %}
+        <article class="video-card">
+          <div class="video-thumbnail">
+            <img src="{{ episode.thumbnail }}" alt="{{ episode.title }}" />
+            <span class="video-duration">{{ episode.duration }}</span>
+          </div>
+          <div class="video-content">
+            <h3>{{ episode.title }}</h3>
+            <p>{{ episode.description }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

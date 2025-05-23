@@ -1,0 +1,136 @@
+.terminal-modal {
+    --terminal-bg: #1a1a1a;
+    --terminal-text: #00ff00;
+    --terminal-border: #00ff00;
+    --terminal-shadow: rgba(0, 255, 0, 0.2);
+    
+    background: var(--terminal-bg);
+    border: 2px solid var(--terminal-border);
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--terminal-shadow);
+    color: var(--terminal-text);
+    font-family: 'Courier New', monospace;
+    padding: 2rem;
+    width: 600px;
+    max-width: 90vw;
+    position: relative;
+}
+.terminal-modal::-webkit-scrollbar {
+    display: none;
+  }
+  .terminal-modal {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+.terminal-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.terminal-content {
+    min-height: 200px;
+    margin-bottom: 1rem;
+}
+
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.terminal-prompt {
+    color: var(--terminal-text);
+}
+
+.terminal-field {
+    background: transparent;
+    border: none;
+    color: var(--terminal-text);
+    font-family: 'Courier New', monospace;
+    font-size: 1.6rem;
+    outline: none;
+    width: 100%;
+}
+
+.terminal-field::placeholder {
+    color: rgba(0, 255, 0, 0.5);
+}
+
+.terminal-message {
+    margin: 1rem 0;
+    white-space: pre-wrap;
+}
+
+.terminal-success {
+    color: #00ff00;
+}
+
+.terminal-error {
+    color: #ff0000;
+}
+
+.terminal-ascii {
+    font-family: monospace;
+    white-space: pre;
+    margin: 2rem 0;
+    line-height: 1.2;
+}
+
+/* Blinking cursor effect */
+.terminal-cursor {
+    display: inline-block;
+    width: 0.8rem;
+    height: 1.6rem;
+    background: var(--terminal-text);
+    margin-left: 0.4rem;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Glitch effect for the terminal */
+.terminal-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        transparent 0%,
+        rgba(0, 255, 0, 0.05) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Accessibility styles */
+.terminal-modal:popover-open {
+    display: block;
+}
+
+.terminal-modal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+} 

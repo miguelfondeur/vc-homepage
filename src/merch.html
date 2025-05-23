@@ -1,0 +1,78 @@
+---
+layout: layout.html
+title: Merch - Chaos Byte
+description: Get your hands on our limited edition cyberpunk merch. Break the rules, wear the chaos.
+---
+
+<section class="merch-hero page-hero">
+  <div class="container">
+    <h1 class="page-title glitch">Merch</h1>
+    <p class="page-subtitle">Wear your support for the anti-corporate tech movement. Each item is a statement piece for the digital rebel in you.</p>
+  </div>
+</section>
+
+<section class="merch-grid">
+  <div class="container">
+    <div class="coming-soon" style="margin-top: 4rem;">
+      <h2>We don't have any... yet.</h2>
+      <div id="responseContainer">
+        <p>But if you like making fun of big tech and building things that make people happy instead of sucking their souls, look out for merch related to Chaos Byte coming soon.<br><br>But when we post it... You have to buy it though... Otherwise.... Why are you here? I mean, I don't mind, but.. you know.</p>
+      </div>
+      <a href="#" class="button" id="merchButton" style="transition: transform 1s ease-in-out;">I want Merch</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  let clickCount = 0;
+  let blinkInterval;
+  
+  // Check if user has clicked 4 times before
+  if (localStorage.getItem('merchButtonClicked4Times')) {
+    document.getElementById('responseContainer').innerHTML = `
+      <p>Look, I'm sorry we had to do that.. I know you liked the button.. but sometimes things have to go away so that they can come back stronger.. Like... as real merch that you can purchase. It's for your own good. You'll thanks us later.</p>
+    `;
+    document.getElementById('merchButton').style.transform = 'translateY(100vh)';
+  }
+  
+  document.getElementById('merchButton').addEventListener('click', function(e) {
+    e.preventDefault();
+    clickCount++;
+    
+    if (clickCount === 1) {
+      document.getElementById('responseContainer').innerHTML = `
+        <p>We told you... we don't have any yet... I know you want merch... but you have to be patient. We love you though... We love the effort.</p>
+      `;
+    } else if (clickCount === 2) {
+      document.getElementById('site-content').style.backgroundColor = 'var(--color-secondary)';
+      document.getElementById('responseContainer').innerHTML = `
+        <p>Do you like this? Do you like this yellow background? No? Stop clicking the button, we hear you. We're working on it. Enough....</p>
+      `;
+    } else if (clickCount === 3) {
+      document.getElementById('responseContainer').innerHTML = `
+        <p style="font-size: 2.4rem; text-transform: uppercase;">DO YOU LIKE THIS??? HOW ABOUT THIS??? IF YOU KEEP CLICKING I'M TAKING AWAY YOUR PRECIOUS BUTTON.</p>
+      `;
+      
+      // Start blinking
+      let isYellow = true;
+      blinkInterval = setInterval(() => {
+        document.getElementById('site-content').style.backgroundColor = isYellow ? 'var(--color-secondary)' : 'var(--color-white)';
+        isYellow = !isYellow;
+      }, 300);
+    } else if (clickCount === 4) {
+      // Stop blinking
+      clearInterval(blinkInterval);
+      // Reset background
+      document.getElementById('site-content').style.backgroundColor = 'var(--color-white)';
+      // Update both paragraphs
+      const farewellMessage = "Look, I'm sorry we had to do that.. I know you liked the button.. but sometimes things have to go away so that they can come back stronger.. Like... as real merch that you can purchase. It's for your own good. You'll thanks us later.";
+      document.getElementById('responseContainer').innerHTML = `
+        <p>${farewellMessage}</p>
+      `;
+      // Animate button off screen
+      document.getElementById('merchButton').style.transform = 'translateY(100vh)';
+      // Save to localStorage
+      localStorage.setItem('merchButtonClicked4Times', 'true');
+    }
+  });
+</script>

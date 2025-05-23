@@ -1,16 +1,132 @@
 ---
 title: Home
 layout: layout.html
+shows: shows
 ---
 
 <section class="hero-section">
   <div class="container" data-columns="2">
     <div class="hero-content">
-      <h1 class="hero-title">THE INTERNET IS BROKEN. GOOD</h1>
-      <h2>A rogue media lab for viral, weird, and anti-corporate tech experiments.</h2>
+      <h1 class="hero-title">THE INTERNET IS BROKEN. GOOD.</h1>
+      <h2>Embrace Chaos - a rogue media lab for weird, alternative and anti-corporate tech experiments.</h2>
     </div>
     <div class="hero-art">
-      
+      <img src="/assets/img/hero-image.png" alt="Hero image" />
+    </div>
+  </div>
+  <div class="hero-section-melting"></div>
+</section>
+
+<section class="latest-vibes">
+  <div class="container">
+    <h2 class="section-title glitch">Latest Vibes</h2>
+    <div class="vibes-grid" data-view="grid">
+      {% for app in vibes.apps limit:3 %}
+      <article class="vibe-card">
+        {% if app.isNew %}
+        <span class="new-badge">New</span>
+        {% endif %}
+        <div class="vibe-header">
+          <div class="vibe-thumbnail">
+            <img src="{{ app.image }}" alt="{{ app.title }}" />
+          </div>
+          <div class="vibe-info">
+            <h3>{{ app.title }}</h3>
+            <span class="vibe-type">{{ app.type }}</span>
+          </div>
+        </div>
+        <div class="vibe-content">
+          <p>{{ app.description }}</p>
+          <a href="{{ app.url }}" class="button" target="_blank" rel="noopener">Try It Now</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="vibes-cta">
+      <a href="/vibes" class="button">See All Vibe Apps</a>
+    </div>
+  </div>
+  <div class="latest-vibes-melting"></div>
+</section>
+
+<section class="latest-articles">
+  <div class="container">
+    <h2 class="section-title glitch">Latest Articles</h2>
+    <div class="articles-grid">
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="2024-03-21">March 21, 2024</time>
+          <span class="article-tag">Future</span>
+        </div>
+        <h3>The Return of Personal Tech: Why Smaller, Weirder Apps Are the Future</h3>
+        <p>Remember when technology just worked? No logins, no updates, no data collection. We explore the growing movement of alternative tech and why the future belongs to the makers and tinkerers.</p>
+        <a href="/articles/alternative-tech" class="read-more">Read More →</a>
+      </article>
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="2024-03-20">March 20, 2024</time>
+          <span class="article-tag">Vibes</span>
+        </div>
+        <h3>V-Combinator Do What Y-Combinator Don't</h3>
+        <p>In a world obsessed with 'disrupting' everything, we're disrupting disruption itself. Meet the accelerator that's betting on apps that make you feel something.</p>
+        <a href="/articles/v-combinator" class="read-more">Read More →</a>
+      </article>
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="2024-03-19">March 19, 2024</time>
+          <span class="article-tag">Future</span>
+        </div>
+        <h3>AI Took My Job, Now What? A Millennial's Guide to the Blue Collar Revolution</h3>
+        <p>As AI replaces white-collar jobs faster than you can say 'prompt engineering', we explore the future of work and where all that UBI money is supposed to come from.</p>
+        <a href="/articles/ai-ubi-crisis" class="read-more">Read More →</a>
+      </article>
+    </div>
+    <div class="articles-cta">
+      <a href="/articles" class="button">See All Articles</a>
+    </div>
+  </div>
+  <div class="latest-articles-melting"></div>
+</section>
+
+<!-- Hide for now-->
+<!--
+<section class="latest-shows">
+  <div class="container">
+    <h2 class="section-title glitch">Latest Shows</h2>
+    <div class="video-grid">
+      {% for show in shows.shows %}
+        {% for episode in show.episodes %}
+          <article class="video-card">
+            <a href="{{ episode.url }}" target="_blank" rel="noopener" class="video-thumbnail">
+              <img src="{{ episode.thumbnail }}" alt="{{ episode.title }}" />
+              <span class="video-duration">{{ episode.duration }}</span>
+            </a>
+            <div class="video-content">
+              <h3>{{ episode.title }}</h3>
+              <p>{{ episode.description }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="shows-cta">
+      <a href="/shows" class="button">See All Shows</a>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="join-us">
+  <div class="join-us-melting"></div>
+  <div class="container">
+    <div class="join-content">
+      <h2 class="section-title glitch">Join the Chaos</h2>
+      <p>Be part of our growing community of digital rebels. Get early access to our tools, exclusive content, and join our Discord server.</p>
+      <div class="cta-buttons">
+        <!-- <a href="#" class="button button-primary">Join Discord</a> -->
+        <button class="button button-secondary" data-modal="terminalModal">Subscribe to Newsletter</button>
+      </div>
+    </div>
   </div>
 </section>
 

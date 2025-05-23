@@ -1,0 +1,31 @@
+---
+layout: layout.html
+title: Vibes - Chaos Byte
+description: Our vibe coded apps and projects. Some funny, some serious, all awesome.
+---
+
+<section class="page-hero vibes-hero">
+  <div class="container">
+    <h1 class="page-title glitch">Feeling the Vibes</h1>
+    <p class="page-subtitle">Our vibe coded apps and projects. Some funny, some serious, all awesome.</p>
+  </div>
+</section>
+
+<section class="content-section vibes-page">
+  <div class="container">
+    <div class="vibes-grid" data-view="list">
+      {% for app in vibes.apps %}
+      <div class="vibe-card">
+        <div class="vibe-image">
+          <img src="{{ app.image }}" alt="{{ app.title }}" />
+        </div>
+        <div class="vibe-content">
+          <h3>{{ app.title }}</h3>
+          <p>{{ app.description }}</p>
+          <a href="{{ app.url }}" class="button button-primary" target="_blank" rel="noopener">Try it out</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> 

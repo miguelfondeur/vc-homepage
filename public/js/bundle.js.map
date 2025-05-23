@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/modules/theme.js", "../../src/js/index.js"],
+  "sourcesContent": ["// Theme toggle functionality\nexport function initThemeToggle() {\n    // Toggle theme using event delegation\n    document.addEventListener(\"click\", (event) => {\n        const themeToggleButton = event.target.closest(\"#theme-toggle\");\n        if (!themeToggleButton) return;\n\n        const newTheme = document.documentElement.dataset.theme === \"dark\" ? \"light\" : \"dark\";\n        document.documentElement.dataset.theme = newTheme;\n        localStorage.setItem(\"theme\", newTheme);\n    });\n} ", "\"use strict\";\n\nimport { initThemeToggle } from './modules/theme.js';\nimport { initModals } from './modules/modal.js';\n\nconsole.log('%cWelcome to MiguelFondeur.com', 'color: #b6a572; font-size: 18px; font-family: serif;');\n\n// Initialize theme toggle\ninitThemeToggle();\n\n// Initialize modals\n// initModals();"],
+  "mappings": "AACO,SAASA,GAAkB,CAE9B,SAAS,iBAAiB,QAAUC,GAAU,CAE1C,GAAI,CADsBA,EAAM,OAAO,QAAQ,eAAe,EACtC,OAExB,IAAMC,EAAW,SAAS,gBAAgB,QAAQ,QAAU,OAAS,QAAU,OAC/E,SAAS,gBAAgB,QAAQ,MAAQA,EACzC,aAAa,QAAQ,QAASA,CAAQ,CAC1C,CAAC,CACL,CCNA,QAAQ,IAAI,iCAAkC,sDAAsD,EAGpGC,EAAgB",
+  "names": ["initThemeToggle", "event", "newTheme", "initThemeToggle"]
+}

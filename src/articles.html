@@ -1,43 +1,32 @@
 ---
-layout: layout.html 
+layout: layout.html
+title: Articles - Chaos Byte
+description: Read our latest articles about breaking the rules of web development and design.
 ---
 
-<section class="hero-section">
-    <div class="container" data-width="small">
-        <h1>Writing about code, design, <em>&</em> life lessons.</h1>
-        <p>
-            A collection of my thoughts on programming, team leadership, product development, and the creative intersections of music and technology—organized chronologically.
-        </p>
+<section class="page-hero articles-hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="page-title glitch">Latest Articles</h1>
+      <p class="page-subtitle">No-bullshit guides and deep dives into the world of punk web development.</p>
     </div>
+  </div>
 </section>
+
 <section class="content-section">
-    <div class="container" data-width="medium">
-        <div class="article-wrapper split-wrapper"><!-- Sub Grid for Articles -->
-            {% assign sortedArticles = collections.articles | sort: "data.date" | reverse %}
-            {% for article in sortedArticles %}
-                {% unless article.data.draft %}
-                    <article class="article-card card-split">
-                        <time class="" datetime="{{ article.date | date: '%Y-%m-%d' }}">
-                            {{ article.date | date: "%B %d, %Y" }}
-                        </time>
-                        <a href="{{ article.url }}" title="Open Blog Post - {{ article.data.title }}">
-                            <div class="card-content">
-                                <div class="h3">
-                                    {{ article.data.title }}
-                                </div>
-                                <p class="">{{ article.data.summary }}</p>
-                                <div aria-hidden="true" class="article-cta">
-                                    Read article
-                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" class="">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="article-hover-state"></div>
-                        </a>
-                    </article>
-                {% endunless %}
-            {% endfor %}
+  <div class="container">
+    <div class="articles-list">
+      {% for article in collections.articles reversed %}
+      <article class="article-card">
+        <div class="article-meta">
+          <time datetime="{{ article.data.date | date: '%Y-%m-%d' }}">{{ article.data.date | date: '%B %d, %Y' }}</time>
+          <span class="article-tag">{{ article.data.tag }}</span>
         </div>
+        <h3>{{ article.data.title }}</h3>
+        <p>{{ article.data.description }}</p>
+        <a href="{{ article.url }}" class="read-more">Read More →</a>
+      </article>
+      {% endfor %}
     </div>
+  </div>
 </section>
