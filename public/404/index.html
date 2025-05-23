@@ -62,6 +62,27 @@
             document.documentElement.dataset.theme = "light";
          }
       })();
+
+      document.body.classList.add("js-enabled");
+
+      // Hamburger menu functionality
+      const menuToggle = document.querySelector('.menu-toggle');
+      const siteNav = document.querySelector('.site-nav');
+
+      menuToggle.addEventListener('click', () => {
+         menuToggle.classList.toggle('active');
+         siteNav.classList.toggle('active');
+         document.body.style.overflow = siteNav.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.site-nav a').forEach(link => {
+         link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            siteNav.classList.remove('active');
+            document.body.style.overflow = '';
+         });
+      });
    </script>
    <!-- Does not work in all browser -->
    <script type="speculationrules">
@@ -303,17 +324,115 @@
             4px 4px 0 var(--color-secondary);
         }
       }
+
+      /* Hamburger menu styles */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 1000;
+        margin-left: auto;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 2.4rem;
+        height: 2px;
+        background: var(--color-white);
+        margin: 6px 0;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white);
+        transition: all 0.3s ease;
+      }
+
+      .menu-toggle span::before {
+        transform: translateY(-8px);
+      }
+
+      .menu-toggle span::after {
+        transform: translateY(8px);
+      }
+
+      .menu-toggle.active span {
+        background: transparent;
+      }
+
+      .menu-toggle.active span::before {
+        transform: rotate(45deg);
+        background: var(--color-primary);
+      }
+
+      .menu-toggle.active span::after {
+        transform: rotate(-45deg);
+        background: var(--color-primary);
+      }
+
+      .menu-toggle:hover span,
+      .menu-toggle:hover span::before,
+      .menu-toggle:hover span::after {
+        background: var(--color-primary);
+      }
+
+      @media (max-width: 900px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .site-nav {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          height: 100vh;
+          background: var(--color-black);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: right 0.3s ease;
+          z-index: 999;
+          padding: 8rem 0;
+        }
+
+        .site-nav.active {
+          right: 0;
+        }
+
+        .site-nav a {
+          font-size: 2.4rem;
+          margin: 1.6rem 0;
+        }
+
+        nav.container {
+          display: flex;
+          align-items: center;
+        }
+      }
    </style>
 </head>
 <body data-theme="">
    <div class="site-wrapper">
 
       <header id="site-header" class="site-header">
-    <nav class="container">
-
+    <div class="container">
       <a href="#site-content" class="skip-nav-button">Skip Navigation</a>
       <a href="/" class="site-logo glitch">CHAOS <span class="byte-accent">BYTE</span></a>
-
+    </div>
+    <nav class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+         <span></span>
+      </button>
       <ul class="site-nav">
         <li><a href="/" >Home</a></li>
         <li><a href="/vibes" >Vibes</a></li>
@@ -381,141 +500,7 @@
 </div>
       </footer>
 
-      <dialog id="terminalModal" class="terminal-modal">
-        <div class="terminal-header">
-          <span class="terminal-title">Newsletter Subscription Terminal</span>
-        </div>
-        <div class="terminal-content">
-          <div id="terminalOutput"></div>
-          <form class="terminal-form" id="terminalForm">
-            <div class="terminal-input">
-              <span class="terminal-prompt">$</span>
-              <input type="text" class="terminal-field" id="terminalInput" placeholder="Type here..." autocomplete="off" required>
-              <span class="terminal-cursor"></span>
-            </div>
-          </form>
-        </div>
-      </dialog>
-
    </div>
-   <!-- inline scripts -->
-   <script>
-      document.body.classList.add("js-enabled");
-   </script>
-   <script>
-      const ASCII_ART = `
-        /\\___/\\
-       (  o o  )
-       (  =^=  ) 
-        (____)__)
-      `;
-
-      const terminalModal = document.getElementById('terminalModal');
-      const terminalForm = document.getElementById('terminalForm');
-      const terminalInput = document.getElementById('terminalInput');
-      const terminalOutput = document.getElementById('terminalOutput');
-      let currentStep = 'name';
-
-      function addMessage(message, type = '') {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `terminal-message ${type}`;
-        messageDiv.textContent = message;
-        terminalOutput.appendChild(messageDiv);
-        terminalOutput.scrollTop = terminalOutput.scrollHeight;
-      }
-
-      function triggerGlitchEffect() {
-        const siteWrapper = document.querySelector('.site-wrapper');
-        siteWrapper.classList.add('site-glitch');
-        siteWrapper.setAttribute('data-text', siteWrapper.textContent);
-        
-        // Remove the effect after 3 seconds
-        setTimeout(() => {
-          siteWrapper.classList.remove('site-glitch');
-          siteWrapper.removeAttribute('data-text');
-        }, 3000);
-      }
-
-      function handleSubmit(event) {
-        event.preventDefault();
-        const input = terminalInput.value.trim();
-        
-        if (currentStep === 'name') {
-          if (input) {
-            addMessage(`Name: ${input}`);
-            addMessage('Enter your email:');
-            currentStep = 'email';
-            terminalInput.value = '';
-            terminalInput.focus();
-          }
-        } else if (currentStep === 'email') {
-          if (input.includes('@')) {
-            addMessage(`Email: ${input}`);
-            addMessage('Subscribing...');
-            setTimeout(() => {
-              addMessage('Successfully subscribed!', 'terminal-success');
-              addMessage(ASCII_ART, 'terminal-ascii');
-              addMessage('Type "yes" or press ESC to close');
-              currentStep = 'close';
-              terminalInput.value = '';
-              terminalInput.focus();
-            }, 1000);
-          } else {
-            addMessage('Please enter a valid email address', 'terminal-error');
-            terminalInput.value = '';
-            terminalInput.focus();
-          }
-        } else if (currentStep === 'close') {
-          if (input.toLowerCase() === 'yes') {
-            terminalModal.close();
-            resetTerminal();
-          } else if (input.toLowerCase() === 'chaos byte') {
-            addMessage('CHAOS BYTE DETECTED! INITIATING SYSTEM GLITCH...', 'terminal-success');
-            setTimeout(() => {
-              terminalModal.close();
-              resetTerminal();
-              triggerGlitchEffect();
-            }, 1000);
-          } else {
-            addMessage('Please type "yes" to close or press ESC');
-            terminalInput.value = '';
-            terminalInput.focus();
-          }
-        }
-      }
-
-      function resetTerminal() {
-        terminalOutput.innerHTML = '';
-        terminalInput.value = '';
-        currentStep = 'name';
-        addMessage('Enter your name:');
-      }
-
-      terminalForm.addEventListener('submit', handleSubmit);
-
-      document.querySelectorAll('[data-modal="terminalModal"]').forEach(button => {
-        button.addEventListener('click', () => {
-          terminalModal.showModal();
-          resetTerminal();
-          terminalInput.focus();
-        });
-      });
-
-      // Handle ESC key for closing the modal
-      terminalModal.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-          terminalModal.close();
-          resetTerminal();
-        }
-      });
-
-      // Close modal when clicking the backdrop
-      terminalModal.addEventListener('click', (event) => {
-        if (event.target === terminalModal) {
-          terminalModal.close();
-          resetTerminal();
-        }
-      });
-    </script>
+   
 </body>
 </html>

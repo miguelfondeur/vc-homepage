@@ -24,6 +24,7 @@ html {
 body {
     width: 100%;
     height: 100%;
+    overflow-x: clip;
     /* Fonts and Sizes */
     font-size: var(--type-scale-p);
     font-family: var(--font-family-body);

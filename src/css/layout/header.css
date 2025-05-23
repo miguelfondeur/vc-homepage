@@ -35,6 +35,7 @@ header#site-header nav ul {
     position: relative;
     text-transform: uppercase;
     transition: color 0.2s;
+    text-wrap: nowrap;
 }
 
 .site-logo .byte-accent {

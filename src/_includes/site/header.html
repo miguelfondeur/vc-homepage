@@ -1,9 +1,12 @@
 <header id="site-header" class="site-header">
-    <nav class="container">
-
+    <div class="container">
       <a href="#site-content" class="skip-nav-button">Skip Navigation</a>
       <a href="/" class="site-logo glitch">CHAOS <span class="byte-accent">BYTE</span></a>
-
+    </div>
+    <nav class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+         <span></span>
+      </button>
       <ul class="site-nav">
         <li><a href="/" {% if page.url == '/' %} aria-current="page" {% endif %}>Home</a></li>
         <li><a href="/vibes" {% if page.url == '/vibes/' %} aria-current="page" {% endif %}>Vibes</a></li>

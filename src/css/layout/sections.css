@@ -82,11 +82,15 @@
 
 .hero-art {
   grid-column: 2;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 }
 
 .hero-art img {
